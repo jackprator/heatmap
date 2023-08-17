@@ -31,7 +31,7 @@ map.setMaxBounds([
 
 //heat
 L.marker([27.944647, -82.501494], {icon: heatIcon}).addTo(map)
-    .bindPopup("<h1>Benjamin Brown, 75</h1><audio controls><source src='audio/BrownBite.ogg' type='audio/ogg'><source src='audio/BrownBite.mp3' type='audio/mp3'></audio><p><b>'It's very oppressive. It's not comfortable. It does get to me, you know. But if you got to do it, you just have to do it.'</b><p>Brown walks to get where he is going every day, whether an evening shift at Sally O' Neal's Pizza, a doctor's appointment or a visit with a friend. He wishes South Tampa bus stops had more shade for elderly people like him.</p><img src='images/brown_1.jpeg'/>")
+    .bindPopup("<h1>Benjamin Brown, 75</h1><audio controls><source src='audio/BrownBite.ogg' type='audio/ogg'><source src='audio/BrownBite.mp3' type='audio/mp3'></audio><p><b>'It's very oppressive. It does get to me. It's not comfortable. But if you got to do it, you just have to do it.'</b><p>Brown walks to get where he is going every day, whether an evening shift at Sally O' Neal's Pizza, a doctor's appointment or a visit with a friend. He wishes South Tampa bus stops had more shade for elderly people like him.</p><img src='images/brown_1.jpeg'/>")
     ;  
 
 L.marker([27.940999, -82.493459], {icon: heatIcon}).addTo(map)
