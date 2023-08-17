@@ -1,4 +1,8 @@
-var map = L.map('map').setView([27.943495, -82.495599], 14);
+var map = L.map('map', {
+    zoomControl: false,
+    minZoom: 14,
+    maxZoom: 14
+}).setView([27.943495, -82.495599], 14);
 
 L.tileLayer('https://api.mapbox.com/styles/v1/jackprator/cljmy3znx00ih01pa96ppctqy/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiamFja3ByYXRvciIsImEiOiJja3czcGNmbHM4bjYyMm5zMWdsaDg4OHRsIn0.SmtHCgBGdozIbWaRPgEPww', {
   attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>'
@@ -13,6 +17,17 @@ var shadeIcon = L.icon({
     iconUrl: 'images/shade_icon.png',
     iconSize:     [30, 30], // size of the icon
 });
+
+//map bounds
+var corner1 = L.latLng(27.991523, -82.582192),
+corner2 = L.latLng(27.889770, -82.424820),
+bounds = L.latLngBounds(corner1, corner2);
+
+map.setMaxBounds([
+    [27.991523, -82.582192],
+    [27.889770, -82.424820    ]
+]);
+
 
 //heat
 L.marker([27.944647, -82.501494], {icon: heatIcon}).addTo(map)
@@ -32,4 +47,4 @@ L.marker([27.929345, -82.490853], {icon: shadeIcon}).addTo(map)
 L.marker([27.930561, -82.487989], {icon: shadeIcon}).addTo(map)
     .bindPopup("<h1>Kiki Mercier</h1><audio controls><source src='audio/MercierBite.ogg' type='audio/ogg'><source src='audio/MercierBite.mp3' type='audio/mp3'></audio><p><b>'Every single little spot of shade that I can find I'm going to.'</p></b><p> Mercier walks dogs in South Tampa for a living. Some of her clients' neighborhoods are shady and some are sunny. On this tree-covered sidewalk, she said she feels a huge difference in the air temperature. In neighborhoods with no trees, she can only walk for a short time — the heat is too much for her and the dogs.</p><img src='images/mercier_3.jpeg'/>");  
 
-//<audio controls><source src='audio/BrownBite.ogg' type='audio/ogg'><source src='audio/BrownBite.mp3' type='audio/mp3'></audio>
+//   .flyTo(27.973041, -82.502585)
